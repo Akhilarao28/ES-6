@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>ES-6</h2>
+    <script>
+        //destructuring
+        let arr=[1,2,3,4,5,6]
+        const[a,b,c,d,e]=arr
+        console.log(a,b,c,d,e)
+
+        const obj={name:"akhila"}
+        const{name:n}=obj
+        console.log(n)
+
+        let array=[1,2,7,9,6,44,78,89]
+        const[f,g,h,i,j,k,l,m]=array
+        console.log(f,g,h,i,j,k,l,m)
+
+        //default parameter
+        function sum(a,b=9){
+            console.log(a+b)
+        }
+        sum(7)
+
+        function product(c=9){
+            console.log(c*d)
+        }
+        product(68)
+
+        //spread operator
+        let arr2=[2,78,65,90,34,51,63,83]
+        let arr3=[...arr2]
+        console.log(arr3)
+
+        let obj1={name:"akki",
+        city:"hyd"
+        }
+        let obj2={...obj1}
+        console.log(obj2)
+
+        let obj3={name:"akhile"}
+        let obj4={branch:"ece"}
+        let obj5={...obj3,...obj4}
+        console.log(obj5)
+
+        //rest operator
+        function add(a,b,...c){
+            console.log(a)
+            console.log(b)
+            console.log(...c)
+        }
+        add(1,2,3,78,95,60,45,61)
+
+        function addition(...z){
+         total=0
+           let i=0
+            for(i of z){
+                total=total+i
+            }
+            console.log(total)
+            
+        }
+        addition(1,3,68,94,65,80,31,42,55)
+
+        //shallow copy
+        let arr5=[6,7,9]
+        let v=arr5
+        v[1]=8
+        console.log(arr5)
+
+        let obj6={city:"hyd",
+            branch:"ece"
+        }
+        let y=obj6
+        y.city="warangal"
+        console.log(obj6)
+
+        //shallow copy
+        let arr6=[55,78,99]
+        let t=JSON.parse(JSON.stringify(arr6))
+        t[1]=67
+        console.log(arr6)
+
+        let obj9={
+            branch:"ece",
+            city:"warangal"
+        }
+        let obj10=JSON.parse(JSON.stringify(obj9))
+        obj10.city="hyd"
+        console.log(obj9)
+        console.log(obj10)
+    </script>
+</body>
+</html>
